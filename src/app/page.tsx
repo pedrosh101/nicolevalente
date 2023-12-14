@@ -3,6 +3,15 @@ import Image from "next/image";
 import Projeto from "./components/projeto";
 import Link from "next/link";
 import Logo from "../../public/img/logo.svg";
+import Casa1 from "../../public/img/casa1.jpg"
+import Casa2 from "../../public/img/casa2.jpg"
+import Casa3 from "../../public/img/casa3.jpg"
+import Casa4 from "../../public/img/casa4.jpeg"
+import Casa5 from "../../public/img/casa5.jpeg"
+import Casa6 from "../../public/img/casa6.jpg"
+import Casa7 from "../../public/img/casa7.jpg"
+import Casa8 from "../../public/img/casa8.jpg"
+import Casa9 from "../../public/img/casa9.jpg"
 import { useState, useRef, useEffect } from "react";
 
 
@@ -157,16 +166,56 @@ const Home = () => {
             href="https://www.instagram.com/nicolevalentearquiteta/"
             target="_blank"
           >
-            <Projeto title="Casa 1" />
+            <Projeto title="Projeto 1" path={Casa1}/>
           </Link>
-          <Projeto title="Casa 2" />
-          <Projeto title="Casa 3" />
-          <Projeto title="Casa 4" />
-          <Projeto title="Casa 5" />
-          <Projeto title="Casa 6" />
-          <Projeto title="Casa 7" />
-          <Projeto title="Casa 8" />
-          <Projeto title="Casa 9" />
+          <Link
+            href="https://www.instagram.com/nicolevalentearquiteta/"
+            target="_blank"
+          >
+            <Projeto title="Projeto 2" path={Casa2}/>
+          </Link>
+          <Link
+            href="https://www.instagram.com/nicolevalentearquiteta/"
+            target="_blank"
+          >
+            <Projeto title="Projeto 3" path={Casa3}/>
+          </Link>
+          <Link
+            href="https://www.instagram.com/nicolevalentearquiteta/"
+            target="_blank"
+          >
+            <Projeto title="Projeto 4"  path={Casa4}/>
+          </Link>
+          <Link
+            href="https://www.instagram.com/nicolevalentearquiteta/"
+            target="_blank"
+          >
+            <Projeto title="Projeto 5"  path={Casa5}/>
+          </Link>
+          <Link
+            href="https://www.instagram.com/nicolevalentearquiteta/"
+            target="_blank"
+          >
+            <Projeto title="Projeto 6"  path={Casa6}/>
+          </Link>
+          <Link
+            href="https://www.instagram.com/nicolevalentearquiteta/"
+            target="_blank"
+          >
+            <Projeto title="Projeto 7"  path={Casa7}/>
+          </Link>
+          <Link
+            href="https://www.instagram.com/nicolevalentearquiteta/"
+            target="_blank"
+          >
+            <Projeto title="Projeto 8"  path={Casa8}/>
+          </Link>
+          <Link
+            href="https://www.instagram.com/nicolevalentearquiteta/"
+            target="_blank"
+          >
+            <Projeto title="Projeto 9"  path={Casa9}/>
+          </Link>
         </div>
       </main>
     </main>
