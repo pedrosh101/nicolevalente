@@ -1,12 +1,16 @@
 "use client";
-import React from "react";
-import { useState } from "react";
+import React, { useState, MouseEvent } from "react";
 import Image from "next/image";
 
-const Projeto = ({ title, path }: any) => {
+type ProjetoProps = {
+  title: string;
+  path: any;
+};
+
+const Projeto: React.FC<ProjetoProps> = ({ title, path }) => {
   const [showText, setShowText] = useState(false);
 
-  const handleMouseEnter = (e: any) => {
+  const handleMouseEnter = (e: MouseEvent<HTMLDivElement>) => {
     e.currentTarget.classList.add(
       "filter",
       "brightness-75",
@@ -16,28 +20,31 @@ const Projeto = ({ title, path }: any) => {
     setShowText(true);
   };
 
-  const handleMouseLeave = (e: any) => {
+  const handleMouseLeave = (e: MouseEvent<HTMLDivElement>) => {
     e.currentTarget.classList.remove("filter", "brightness-75");
     setShowText(false);
   };
 
   return (
-    <div
-      className="relative h-96"
-      onMouseEnter={(e) => handleMouseEnter(e)}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className="relative h-96 overflow-hidden">
       <Image
-        src={path} //
+        src={path}
         alt="Imagem"
         fill
         className="w-full h-full object-cover"
+        onMouseEnter={(e) => handleMouseEnter(e)}
+        onMouseLeave={handleMouseLeave}
       />
-      {showText && (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-lg">
+      {/* Texto do título com transição */}
+      <div
+        className={`absolute bottom-0 right-0 w-full transition-transform duration-500 transform ${
+          showText ? "translate-y-0" : "translate-y-full"
+        }`}
+      >
+        <div className="py-1 px-8 bg-orange-50 text-black text-md">
           <p>{title}</p>
         </div>
-      )}
+      </div>
     </div>
   );
 };
