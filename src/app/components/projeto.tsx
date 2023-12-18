@@ -27,6 +27,7 @@ const Projeto: React.FC<ProjetoProps> = ({ title, path }) => {
 
   return (
     <div className="relative h-96 overflow-hidden">
+      {/* Texto do título com transição */}
       <Image
         src={path}
         alt="Imagem"
@@ -35,7 +36,6 @@ const Projeto: React.FC<ProjetoProps> = ({ title, path }) => {
         onMouseEnter={(e) => handleMouseEnter(e)}
         onMouseLeave={handleMouseLeave}
       />
-      {/* Texto do título com transição */}
       <div
         className={`absolute bottom-0 right-0 w-full transition-transform duration-500 transform ${
           showText ? "translate-y-0" : "translate-y-full"
