@@ -4,11 +4,12 @@ import Image from "next/image";
 
 type ProjetoProps = {
   title: string;
-  path: any;
+  path: string;
 };
 
 const Projeto: React.FC<ProjetoProps> = ({ title, path }) => {
   const [showText, setShowText] = useState(false);
+  const [hoveringText, setHoveringText] = useState(false);
 
   const handleMouseEnter = (e: MouseEvent<HTMLDivElement>) => {
     e.currentTarget.classList.add(
@@ -22,8 +23,12 @@ const Projeto: React.FC<ProjetoProps> = ({ title, path }) => {
 
   const handleMouseLeave = (e: MouseEvent<HTMLDivElement>) => {
     e.currentTarget.classList.remove("filter", "brightness-75");
-    setShowText(false);
+    if (!hoveringText) {
+      setShowText(false);
+    }
   };
+
+
 
   return (
     <div className="relative h-96 overflow-hidden">
@@ -31,18 +36,22 @@ const Projeto: React.FC<ProjetoProps> = ({ title, path }) => {
       <Image
         src={path}
         alt="Imagem"
-        fill
-        className="w-full h-full object-cover"
+        layout="fill"
+        objectFit="cover"
         onMouseEnter={(e) => handleMouseEnter(e)}
         onMouseLeave={handleMouseLeave}
       />
       <div
         className={`absolute bottom-0 right-0 w-full transition-transform duration-500 transform ${
-          showText ? "translate-y-0" : "translate-y-full"
+          (showText || hoveringText) ? "translate-y-0" : "translate-y-full"
         }`}
       >
-        <div className="py-1 px-8 bg-orange-50 text-black text-md">
-          <p>{title}</p>
+        <div
+          className="py-1 px-8 bg-orange-50 text-black text-md cursor-pointer"
+          onMouseEnter={() => setHoveringText(true)}
+          onMouseLeave={() => setHoveringText(false)}
+        >
+          <p className="font-public font-semibold text-sm">{title}</p>
         </div>
       </div>
     </div>

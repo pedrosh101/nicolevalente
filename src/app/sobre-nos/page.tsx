@@ -4,7 +4,7 @@ import Sobre from "../../../public/img/Sobre.jpeg";
 
 const SobreNos = () => {
   return (
-    <main className="flex sm:flex-row flex-col  text-black min-h-screen">
+    <main className="flex sm:flex-row flex-col  text-black min-h-screen font-public">
       {/* Primeira coluna */}
       <Navbar />
 
@@ -26,7 +26,7 @@ const SobreNos = () => {
               órgãos públicos fui membro do grupo gestor dos Planos Diretores de
               Ipatinga e Coronel Fabriciano e exerci cargos de gestão de análise
               de projetos arquitetônicos e urbanísticos. Tenho vasta experiência
-              comprovada pelo CAUConselho de Arquitetos e Urbanistas e expertise
+              comprovada pelo CAU (Conselho de Arquitetos e Urbanistas) e expertise
               em aprovação de projetos em órgãos públicos com largo conhecimento
               em legislações urbanísticas. Meus projetos primam pela
               criatividade arquitetônica aliada às melhores práticas da

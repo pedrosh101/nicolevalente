@@ -11,6 +11,9 @@ const config: Config = {
       colors: {
         clr1: '#6F6E6C'
       },
+      fontFamily:{
+        public: ["PUBLIC"]
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
