@@ -19,7 +19,7 @@ const Projetos = () => {
       {/* Segunda coluna */}
       <main className="sm:w-4/5 w-full sm:p-12 p-2 bg-orange-50">
         <h1 className="pb-3 text-xl">Residências</h1>
-        <div className="grid sm:grid-cols-3 sm:gap-8 gap-2 pb-8">
+        <div className="grid sm:grid-cols-4 sm:gap-8 gap-2 pb-8">
           {residenciaProjects.map((proj) => (
             <Link
               key={proj.id}
@@ -27,12 +27,12 @@ const Projetos = () => {
                 pathname: `/projetos/${proj.id}`,
               }}
             >
-              <Projeto title={proj.title} path={proj.img} />
+              <Projeto title={proj.title} path={proj.img} altura={96} />
             </Link>
           ))}
         </div>
         <h1 className="pb-3 text-xl">Outros</h1>
-        <div className="grid sm:grid-cols-3 sm:gap-8 gap-2">
+        <div className="grid sm:grid-cols-4 sm:gap-8 gap-2">
           {outrosProjects.map((proj) => (
             <Link
               key={proj.id}
@@ -40,7 +40,7 @@ const Projetos = () => {
                 pathname: `/projetos/${proj.id}`,
               }}
             >
-              <Projeto title={proj.title} path={proj.img} />
+              <Projeto title={proj.title} path={proj.img} altura={52} />
             </Link>
           ))}
         </div>

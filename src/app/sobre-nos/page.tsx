@@ -15,7 +15,7 @@ const SobreNos = () => {
             <Image src={Sobre} alt="Imagem" fill className="object-cover p-2" />
           </div>
           <div className="bg-orange-50 p-2">
-            <h2 className="text-5xl font-bold mb-4">Nicole Valente</h2>
+            <h2 className="text-5xl mb-6">Nicole Valente</h2>
             <p className="text-lg text-gray-700  leading-relaxed ">
               Olá, sou arquiteta e urbanista e estou há mais de 20 anos
               elaborando sonhos e projetando realidades nos segmentos de

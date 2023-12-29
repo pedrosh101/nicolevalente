@@ -19,6 +19,7 @@ const Home = () => {
               <Projeto
                 title={proj.title}
                 path={proj.img}
+                altura={96}
               />
             </Link>
           ))}

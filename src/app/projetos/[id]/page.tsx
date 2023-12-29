@@ -19,7 +19,7 @@ const ProjetoDetalhes = ({ params }: any) => {
               className="object-cover"
             />
           </div>
-          <h1 className="sm:text-5xl text-4xl font-bold mb-4 sm:mt-10 mt-4">{proj?.title}</h1>
+          <h1 className="sm:text-5xl text-4xl mb-4 sm:mt-10 mt-4">{proj?.title}</h1>
           <div className="sm:w-2/6 w-full mt-4 sm:mt-10 text-sm">
             <div className="flex justify-between">
               <h2 className="font-semibold">local</h2>

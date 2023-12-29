@@ -44,7 +44,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sm:w-1/5 flex sm:flex-col items-center bg-orange-50 justify-between p-6 sm:px-0">
+    <div className="sm:w-1/5 flex sm:flex-col items-center bg-orange-100 justify-between p-6 sm:px-0">
       {/* logo */}
 
       <Link href="/" className="flex justify-center">
@@ -76,13 +76,13 @@ const Navbar = () => {
         >
           <ul className="text-left">
             <li className="my-4 hover:text-clr1">
-              <a href="/contato">Contato</a>
-            </li>
-            <li className="my-4 hover:text-clr1">
               <a href="/projetos">Projetos</a>
             </li>
             <li className="my-4 hover:text-clr1">
               <a href="/sobre-nos">Sobre Nós</a>
+            </li>
+            <li className="my-4 hover:text-clr1">
+              <a href="/contato">Contato</a>
             </li>
           </ul>
 
@@ -139,13 +139,13 @@ const Navbar = () => {
       <nav className="sm:fixed top-1/2 sm:transform sm:-translate-y-1/2 sm:text-xl hidden sm:flex">
         <ul className="text-left">
           <li className="my-4 hover:text-clr1">
-            <a href="/contato">Contato</a>
-          </li>
-          <li className="my-4 hover:text-clr1">
             <a href="/projetos">Projetos</a>
           </li>
           <li className="my-4 hover:text-clr1">
             <a href="/sobre-nos">Sobre Nós</a>
+          </li>
+          <li className="my-4 hover:text-clr1">
+            <a href="/contato">Contato</a>
           </li>
         </ul>
       </nav>

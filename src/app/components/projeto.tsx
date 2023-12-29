@@ -5,9 +5,10 @@ import Image from "next/image";
 type ProjetoProps = {
   title: string;
   path: string;
+  altura: number;
 };
 
-const Projeto: React.FC<ProjetoProps> = ({ title, path }) => {
+const Projeto: React.FC<ProjetoProps> = ({ title, path, altura }) => {
   const [showText, setShowText] = useState(false);
   const [hoveringText, setHoveringText] = useState(false);
 
@@ -28,22 +29,19 @@ const Projeto: React.FC<ProjetoProps> = ({ title, path }) => {
     }
   };
 
-
-
   return (
-    <div className="relative h-96 overflow-hidden">
-      {/* Texto do título com transição */}
+    <div className={`relative overflow-hidden h-${altura}`}>
       <Image
         src={path}
         alt="Imagem"
-        layout="fill"
-        objectFit="cover"
+        fill
         onMouseEnter={(e) => handleMouseEnter(e)}
         onMouseLeave={handleMouseLeave}
+        className="object-cover"
       />
       <div
         className={`absolute bottom-0 right-0 w-full transition-transform duration-500 transform ${
-          (showText || hoveringText) ? "translate-y-0" : "translate-y-full"
+          showText || hoveringText ? "translate-y-0" : "translate-y-full"
         }`}
       >
         <div
