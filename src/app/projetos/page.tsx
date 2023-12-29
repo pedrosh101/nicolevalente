@@ -6,9 +6,7 @@ import { projects } from "../data/projects";
 const residenciaProjects = projects.filter(
   (proj) => proj.tipo === "residencia"
 );
-const outrosProjects = projects.filter(
-  (proj) => proj.tipo === "outros"
-);
+const outrosProjects = projects.filter((proj) => proj.tipo === "outros");
 
 const Projetos = () => {
   return (
@@ -40,7 +38,7 @@ const Projetos = () => {
                 pathname: `/projetos/${proj.id}`,
               }}
             >
-              <Projeto title={proj.title} path={proj.img} altura={52} />
+              <Projeto title={proj.title} path={proj.img} altura={96} />
             </Link>
           ))}
         </div>
