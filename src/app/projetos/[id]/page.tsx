@@ -3,7 +3,8 @@ import Navbar from "@/app/components/navbar";
 import { projects } from "../../data/projects";
 import { useState } from "react";
 import Image from "next/image";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Autoplay from "embla-carousel-autoplay";
+import useEmblaCarousel from "embla-carousel-react";
 
 const ProjetoDetalhes = ({ params }: any) => {
   const proj = projects.find((proj) => proj.id.toString() === params.id);
@@ -12,6 +13,10 @@ const ProjetoDetalhes = ({ params }: any) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(
     null
   );
+
+  const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay()]);
+
+
 
   const openModal = (index: number) => {
     setSelectedImageIndex(index);
@@ -83,14 +88,25 @@ const ProjetoDetalhes = ({ params }: any) => {
                   >
                     &times;
                   </button>
-                  <div className="relative overflow-hidden h-96 w-96">
-                    <Image
-                      src={proj?.fotos[selectedImageIndex] ?? ""}
-                      alt={`Imagem em Tamanho Maior`}
-                      onClick={closeModal}
-                      fill
-                      className="object-cover"
-                    />
+
+                  <div className="overflow-hidden" ref={emblaRef}>
+                    <div className="flex">
+                      {proj?.fotos.map((foto, index) => (
+                        <div
+                          key={index}
+                          className="overflow-hidden h-96 w-80"
+                          onClick={() => openModal(index)}
+                        >
+                          <Image
+                            src={foto}
+                            alt={`Imagem ${index + 1}`}
+                            className="object-cover"
+                            fill
+                          />
+                        </div>
+                      ))}
+                    </div>
+
                   </div>
                 </div>
               </div>
