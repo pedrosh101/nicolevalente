@@ -5,10 +5,10 @@ import Image from "next/image";
 type ProjetoProps = {
   title: string;
   path: string;
-  altura: number;
+
 };
 
-const Projeto: React.FC<ProjetoProps> = ({ title, path, altura }) => {
+const Projeto: React.FC<ProjetoProps> = ({ title, path}) => {
   const [showText, setShowText] = useState(false);
   const [hoveringText, setHoveringText] = useState(false);
 
@@ -30,7 +30,7 @@ const Projeto: React.FC<ProjetoProps> = ({ title, path, altura }) => {
   };
 
   return (
-    <div className={`relative overflow-hidden h-${altura}`}>
+    <div className="relative overflow-hidden h-96">
       <Image
         src={path}
         alt="Imagem"

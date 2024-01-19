@@ -25,7 +25,7 @@ const Projetos = () => {
                 pathname: `/projetos/${proj.id}`,
               }}
             >
-              <Projeto title={proj.title} path={proj.img} altura={96} />
+              <Projeto title={proj.title} path={proj.img}  />
             </Link>
           ))}
         </div>
@@ -38,7 +38,7 @@ const Projetos = () => {
                 pathname: `/projetos/${proj.id}`,
               }}
             >
-              <Projeto title={proj.title} path={proj.img} altura={96} />
+              <Projeto title={proj.title} path={proj.img} />
             </Link>
           ))}
         </div>

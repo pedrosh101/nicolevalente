@@ -8,6 +8,12 @@ export const projects = [
     ano: "2023",
     área: "371,91m²",
     tipo: "residencia",
+    fotos: [
+      "/img/proj100/1.jpg",
+      "/img/proj100/2.jpg",
+      "/img/proj100/3.jpg",
+      "/img/proj100/4.jpg",
+    ],
   },
   {
     id: 101,
@@ -18,6 +24,7 @@ export const projects = [
     ano: "2023",
     área: "300m²",
     tipo: "residencia",
+    fotos: ["/img/proj101/1.jpg", "/img/proj101/2.jpg"],
   },
   {
     id: 102,
@@ -28,6 +35,7 @@ export const projects = [
     ano: "2023",
     área: "585,98m²",
     tipo: "residencia",
+    fotos: ["/img/proj102/2.jpg", "/img/proj102/3.jpg"],
   },
   {
     id: 103,
@@ -38,6 +46,7 @@ export const projects = [
     ano: "2023",
     área: "678,63m²",
     tipo: "outros",
+    fotos: ["/img/proj103/2.jpg", "/img/proj103/3.jpg", "/img/proj103/4.jpg"],
   },
   {
     id: 104,
@@ -48,6 +57,7 @@ export const projects = [
     ano: "2023",
     área: "337m²",
     tipo: "outros",
+    fotos: ["/img/proj104/2.jpg", "/img/proj104/3.jpg"],
   },
   {
     id: 105,
@@ -58,6 +68,7 @@ export const projects = [
     ano: "2023",
     área: "614,77m²",
     tipo: "outros",
+    fotos: [],
   },
   {
     id: 106,
@@ -67,6 +78,7 @@ export const projects = [
     local: "local",
     ano: "00",
     área: "00",
+    fotos: ["/img/casa1.jpg", "/img/casa1.jpg"],
   },
   {
     id: 107,
@@ -76,6 +88,7 @@ export const projects = [
     local: "local",
     ano: "00",
     área: "00",
+    fotos: ["/img/casa1.jpg", "/img/casa1.jpg"],
   },
   {
     id: 108,
@@ -85,5 +98,6 @@ export const projects = [
     local: "local",
     ano: "00",
     área: "00",
+    fotos: ["/img/casa1.jpg", "/img/casa1.jpg"],
   },
 ];
