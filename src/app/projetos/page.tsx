@@ -42,7 +42,7 @@ const Projetos = () => {
             </Link>
           ))}
         </div>
-        <h1 className="pb-3 text-xl">Outros</h1>
+        <h1 className="pb-3 text-xl">Institucionais e Comerciais</h1>
         <div className="grid sm:grid-cols-4 sm:gap-8 gap-2">
           {outrosProjects.map((proj) => (
             <Link
