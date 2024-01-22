@@ -72,13 +72,19 @@ export const projects = [
   },
   {
     id: 106,
-    title: "Projeto 4",
+    title: "Arena Pé Na Areia",
     description: "Especificações sobre o projeto 4",
-    img: "/img/casa4.jpeg",
+    img: "/img/proj106/1.jpg",
     local: "local",
     ano: "00",
     área: "00",
-    fotos: ["/img/casa1.jpg", "/img/casa1.jpg"],
+    tipo: "outros",
+    fotos: [
+      "/img/proj106/1.jpg",
+      "/img/proj106/2.jpg",
+      "/img/proj106/3.jpg",
+      "/img/proj106/4.jpg",
+    ],
   },
   {
     id: 107,
@@ -109,7 +115,11 @@ export const projects = [
     ano: "00",
     área: "00",
     tipo: "interiores",
-    fotos: ["/img/proj109/1.jpg", "/img/proj109/2.jpg","/img/proj109/IMG_2004.jpg"],
+    fotos: [
+      "/img/proj109/1.jpg",
+      "/img/proj109/2.jpg",
+      "/img/proj109/IMG_2004.jpg",
+    ],
   },
   {
     id: 110,
@@ -120,7 +130,12 @@ export const projects = [
     ano: "00",
     área: "00",
     tipo: "interiores",
-    fotos: ["/img/proj110/1.jpg", "/img/proj110/2.jpg","/img/proj110/3.jpg","/img/proj110/4.jpg"],
+    fotos: [
+      "/img/proj110/1.jpg",
+      "/img/proj110/2.jpg",
+      "/img/proj110/3.jpg",
+      "/img/proj110/4.jpg",
+    ],
   },
   {
     id: 111,
@@ -131,7 +146,7 @@ export const projects = [
     ano: "00",
     área: "00",
     tipo: "interiores",
-    fotos: ["/img/proj111/1.jpg", "/img/proj111/2.jpg","/img/proj111/3.jpg"],
+    fotos: ["/img/proj111/1.jpg", "/img/proj111/2.jpg", "/img/proj111/3.jpg"],
   },
   {
     id: 112,
