@@ -137,7 +137,7 @@ const Navbar = () => {
       {/* menu desktop */}
 
       <nav className="sm:fixed top-1/2 sm:transform sm:-translate-y-1/2 sm:text-xl hidden sm:flex">
-        <ul className="text-left">
+        <ul className="text-center">
           <li className="my-4 hover:text-clr1">
             <a href="/projetos">Projetos</a>
           </li>
