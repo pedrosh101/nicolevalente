@@ -119,7 +119,7 @@ const ProjetoDetalhes = ({ params }: any) => {
                         navigation
                         pagination={{ type: "fraction" }}
                         modules={[Navigation, Pagination]}
-                        className="h-[50em] w-[80em]"
+                        className="md:h-[50em] md:w-[80em] h-96 w-96"
                       >
                         {proj?.fotos.map((foto, index) => (
                           <SwiperSlide key={index}>
