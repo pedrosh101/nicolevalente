@@ -3,6 +3,8 @@ import Projeto from "../components/projeto";
 import Navbar from "../components/navbar";
 import { projects } from "../data/projects";
 
+
+
 const residenciaProjects = projects.filter((proj) => proj.tipo === "residencia");
 const intProjects = projects.filter((proj) => proj.tipo === "interiores");
 const outrosProjects = projects.filter((proj) => proj.tipo === "outros");

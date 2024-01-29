@@ -7,9 +7,9 @@ const Contato = () => {
       <Navbar />
 
       {/* Segunda coluna */}
-      <main className="sm:w-4/5 w-full sm:p-12 p-2 bg-orange-50 min-h-screen">
+      <main className="sm:w-4/5 w-full sm:p-12 bg-orange-50 min-h-screen">
         <div className="bg-orange-100 flex sm:justify-end sm:pr-40 justify-center">
-          <div className="bg-orange-200 p-8 space-y-8">
+          <div className="sm:bg-orange-200 bg-orange-50 p-8 space-y-8 w-full sm:w-auto font-light sm:font-normal">
             <div className="flex space-x-4">
               <svg
                 viewBox="0 0 24 24"

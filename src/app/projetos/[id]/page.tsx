@@ -3,8 +3,13 @@ import Navbar from "@/app/components/navbar";
 import Image from "next/image";
 import { projects } from "../../data/projects";
 import { useState } from "react";
-import Autoplay from "embla-carousel-autoplay";
-import useEmblaCarousel from "embla-carousel-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/thumbs";
 
 const ProjetoDetalhes = ({ params }: any) => {
   const proj = projects.find((proj) => proj.id.toString() === params.id);
@@ -13,8 +18,6 @@ const ProjetoDetalhes = ({ params }: any) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(
     null
   );
-
-  const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay()]);
 
   const openModal = (index: number) => {
     setSelectedImageIndex(index);
@@ -30,8 +33,8 @@ const ProjetoDetalhes = ({ params }: any) => {
     <>
       <main className="flex sm:flex-row flex-col text-black">
         <Navbar />
-        <div className="flex flex-col sm:w-4/5 w-full sm:p-12 p-2 bg-orange-50">
-          <div className="flex flex-col min-h-screen items-center w-full">
+        <div className="flex flex-col sm:w-4/5 w-full sm:p-12 p-2 bg-orange-50 min-h-screen">
+          <div className="flex flex-col md:min-h-screen items-center w-full">
             {/* primeiro elemento */}
             <div className="sm:h-4/6 h-96 w-full relative">
               <Image
@@ -43,30 +46,43 @@ const ProjetoDetalhes = ({ params }: any) => {
             </div>
 
             {/* segundo elemento, textos */}
-            <h1 className="sm:text-5xl text-4xl mb-4 sm:mt-10 mt-4">
+            <h1 className="sm:text-5xl text-4xl sm:my-12 my-10 text-center">
               {proj?.title}
             </h1>
-            <div className="sm:w-2/6 w-full mt-4 sm:mt-10 text-sm">
-              <div className="flex justify-between">
-                <h2 className="font-semibold">local</h2>
-                <h2>{proj?.local}</h2>
-              </div>
-              <div className="h-0.5 w-full bg-clr1  my-2"></div>
-              <div className="flex justify-between">
-                <h2 className="font-semibold">ano</h2>
-                <h2>{proj?.ano}</h2>
-              </div>
-              <div className="h-0.5 w-full bg-clr1  my-2"></div>
-              <div className="flex justify-between">
-                <h2 className="font-semibold">área</h2>
-                <h2>{proj?.área}</h2>
-              </div>
+            <div className="sm:w-2/6 w-full px-4 sm:px-0 text-sm">
+              {proj?.local && (
+                <div>
+                  <div className="flex justify-between">
+                    <h2 className="font-semibold">local</h2>
+                    <h2>{proj?.local}</h2>
+                  </div>
+                </div>
+              )}
+
+              {proj?.ano && (
+                <div>
+                  <div className="h-[1.0px] w-full bg-black my-2"></div>
+                  <div className="flex justify-between">
+                    <h2 className="font-semibold">ano</h2>
+                    <h2>{proj?.ano}</h2>
+                  </div>
+                </div>
+              )}
+              {proj?.área && (
+                <div>
+                  <div className="h-[1.0px] w-full bg-black my-2"></div>
+                  <div className="flex justify-between">
+                    <h2 className="font-semibold">área</h2>
+                    <h2>{proj?.área}</h2>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
           {/* terceiro elemento, miniaturas */}
 
-          <div className="flex gap-4 mt-8 self-start w-full">
+          <div className="flex flex-wrap gap-4 mt-12 w-full justify-center sm:justify-start">
             {proj?.fotos.map((foto, index) => (
               <div
                 key={index}
@@ -82,7 +98,7 @@ const ProjetoDetalhes = ({ params }: any) => {
               </div>
             ))}
 
-            {/* modal, embla carousel */}
+            {/* modal, swiper */}
             {modalIsOpen && selectedImageIndex !== null && (
               <div
                 className="fixed inset-0 flex items-center justify-center min-h-screen"
@@ -97,22 +113,27 @@ const ProjetoDetalhes = ({ params }: any) => {
                     &times;
                   </button>
 
-                  <div
-                    className="overflow-hidden"
-                    ref={emblaRef}
-                  >
-                    <div className="flex">
-                      {proj?.fotos.map((foto, index) => (
-                        <Image
-                          key={index}
-                          src={foto}
-                          alt={`Imagem ${index + 1}`}
-                          className="object-cover flex-grow-0 flex-shrink-0 w-full"
-                          height={200}
-                          width={200}
-                          sizes="25vh"
-                        />
-                      ))}
+                  <div className="overflow-hidden">
+                    <div className="container">
+                      <Swiper
+                        navigation
+                        pagination={{ type: "fraction" }}
+                        modules={[Navigation, Pagination]}
+                        className="h-[50em] w-[80em]"
+                      >
+                        {proj?.fotos.map((foto, index) => (
+                          <SwiperSlide key={index}>
+                            <div className="flex h-full w-full items-center justify-center">
+                              <Image
+                                src={foto}
+                                alt={`Imagem ${index + 1}`}
+                                className="block object-contain h-full w-full"
+                                fill
+                              />
+                            </div>
+                          </SwiperSlide>
+                        ))}
+                      </Swiper>
                     </div>
                   </div>
                 </div>

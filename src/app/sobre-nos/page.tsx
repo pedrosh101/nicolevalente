@@ -11,12 +11,12 @@ const SobreNos = () => {
       {/* Segunda coluna */}
       <div className="flex items-center justify-center sm:w-4/5 w-full sm:p-12 bg-orange-50">
         <div className="sm:grid grid-cols-2 gap-8 items-center h-screen">
-          <div className="relative h-4/5 overflow-hidden ">
-            <Image src={Sobre} alt="Imagem" fill className="object-cover p-2" />
+          <div className="relative sm:h-4/5 h-3/5 overflow-hidden ">
+            <Image src={Sobre} alt="Imagem" fill className="object-cover px-2 pt-2" />
           </div>
-          <div className="bg-orange-50 p-2">
-            <h2 className="text-5xl mb-6">Nicole Valente</h2>
-            <p className="text-lg text-gray-700  leading-relaxed ">
+          <div className="bg-orange-50 px-2 pb-6">
+            <h2 className="sm:text-5xl text-4xl py-4">Nicole Valente</h2>
+            <p className="sm:text-lg text-gray-700  sm:leading-relaxed leading-normal">
               Olá, sou arquiteta e urbanista e estou há mais de 20 anos
               elaborando sonhos e projetando realidades nos segmentos de
               arquitetura e interiores de projetos institucionais, residenciais
