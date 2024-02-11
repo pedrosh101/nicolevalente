@@ -1,7 +1,10 @@
 import Navbar from "../components/navbar";
-import Map from "../components/map";
+import dynamic from 'next/dynamic'
 
 const Contato = () => {
+
+  const Map = dynamic(() => import("../components/map"), { ssr: false });
+
   return (
     <main className="flex sm:flex-row flex-col  text-black min-h-screen">
       {/* Primeira coluna */}
