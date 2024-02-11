@@ -1,4 +1,5 @@
 import Navbar from "../components/navbar";
+import Map from "../components/map";
 
 const Contato = () => {
   return (
@@ -62,6 +63,7 @@ const Contato = () => {
             </div>
           </div>
         </div>
+          <Map />
       </main>
     </main>
   );
