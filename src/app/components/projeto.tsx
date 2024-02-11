@@ -1,14 +1,15 @@
 "use client";
 import React, { useState, MouseEvent } from "react";
 import Image from "next/image";
+import { twMerge } from "tailwind-merge";
 
 type ProjetoProps = {
   title: string;
   path: string;
-
+  className:any;
 };
 
-const Projeto: React.FC<ProjetoProps> = ({ title, path}) => {
+const Projeto: React.FC<ProjetoProps> = ({ title, path, className}) => {
   const [showText, setShowText] = useState(false);
   const [hoveringText, setHoveringText] = useState(false);
 
@@ -30,7 +31,7 @@ const Projeto: React.FC<ProjetoProps> = ({ title, path}) => {
   };
 
   return (
-    <div className="relative overflow-hidden h-96">
+    <div className={twMerge("relative overflow-hidden h-96", className)}>
       <Image
         src={path}
         alt="Imagem"

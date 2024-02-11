@@ -27,7 +27,7 @@ const Projetos = () => {
                 pathname: `/projetos/${proj.id}`,
               }}
             >
-              <Projeto title={proj.title} path={proj.img}  />
+              <Projeto title={proj.title} path={proj.img} className={"h-72"}  />
             </Link>
           ))}
         </div>
@@ -40,7 +40,7 @@ const Projetos = () => {
                 pathname: `/projetos/${proj.id}`,
               }}
             >
-              <Projeto title={proj.title} path={proj.img}  />
+              <Projeto title={proj.title} path={proj.img} className={"h-72"} />
             </Link>
           ))}
         </div>
@@ -53,7 +53,7 @@ const Projetos = () => {
                 pathname: `/projetos/${proj.id}`,
               }}
             >
-              <Projeto title={proj.title} path={proj.img}  />
+              <Projeto title={proj.title} path={proj.img} className={"h-72"} />
             </Link>
           ))}
         </div>

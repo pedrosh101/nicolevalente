@@ -18,7 +18,7 @@ const Home = () => {
                 pathname: `/projetos/${proj.id}`,
               }}
             >
-              <Projeto title={proj.title} path={proj.img} />
+              <Projeto title={proj.title} path={proj.img} className={''} />
             </Link>
           ))}
         </div>
