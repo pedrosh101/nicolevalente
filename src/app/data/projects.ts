@@ -200,7 +200,7 @@ export const projects = [
     id: 118,
     title: "Residência em Coronel Fabriciano ",
     description: "Especificações sobre o projeto 6",
-    img: "/img/proj118/1.jpg",
+    img: "/img/proj118/14.jpg",
     local: "Coronel Fabriciano-MG",
     ano: "2010",
     área: "421,53m²",
