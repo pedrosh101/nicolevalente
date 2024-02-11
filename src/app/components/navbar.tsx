@@ -48,7 +48,7 @@ const Navbar = () => {
       {/* logo */}
 
       <Link href="/" className="flex justify-center">
-        <div className="sm:fixed sm:top-0 relative sm:w-56 w-40">
+        <div className="sm:fixed sm:top-0 relative sm:w-72 w-56">
           <Image src={Logo} className="object-cover" alt="logo" />
         </div>
       </Link>
