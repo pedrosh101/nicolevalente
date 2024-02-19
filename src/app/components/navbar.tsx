@@ -44,7 +44,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sm:w-1/5 flex sm:flex-col items-center bg-orange-100 justify-between p-6 sm:px-0">
+    <div className="flex sm:flex-col items-center bg-orange-100 justify-between py-6 sm:px-0 px-4 sm:w-1/5 ">
       {/* logo */}
 
       <Link href="/" className="flex justify-center">
@@ -61,11 +61,11 @@ const Navbar = () => {
         </svg>
       </div>
 
-      {/* menu mobile */}
+      {/* menu mobile aberto */}
 
       <div
         className={`fixed inset-0 bg-black bg-opacity-75 z-50 transition-opacity duration-700 ${
-          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          isOpen ? "opacity-100 z-50" : "opacity-0 pointer-events-none"
         }`}
       >
         <div

@@ -22,19 +22,19 @@ const customIcon = L.divIcon({
 export default function Mapa() {
   return (
     <MapContainer
-      center={[-19.527300322312055, -42.62326094418149]}
-      zoom={20}
-      style={{ height: "400px", width: "100%", marginTop: "10px" }}
-    >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
+    center={[-19.527300322312055, -42.62326094418149]}
+    zoom={20}
+    style={{ height: "400px", width: "100%", marginTop: "10px", position: "relative", zIndex: 0 }}
+  >
+    <TileLayer
+      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    />
 
-      <Marker
-        position={[-19.527300322312055, -42.62326094418149]}
-        icon={customIcon}
-      ></Marker>
-    </MapContainer>
+    <Marker
+      position={[-19.527300322312055, -42.62326094418149]}
+      icon={customIcon}
+    ></Marker>
+  </MapContainer>
   );
 }
