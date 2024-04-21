@@ -119,7 +119,7 @@ const ProjetoDetalhes = ({ params }: any) => {
                         navigation
                         pagination={{ type: "fraction" }}
                         modules={[Navigation, Pagination]}
-                        className="md:h-[50em] md:w-[80em] h-96 w-96"
+                        className="md:min-h-screen md:w-[70em] h-96 w-96"
                         initialSlide={
                           selectedImageIndex !== null ? selectedImageIndex : 0
                         }
