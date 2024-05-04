@@ -4,19 +4,18 @@ import Sobre from "../../../public/img/Sobre.jpeg";
 
 const SobreNos = () => {
   return (
-    <main className="flex sm:flex-row flex-col  text-black min-h-screen font-public">
+    <main className="flex lg:flex-row flex-col bg-orange-50 text-black  font-public">
       {/* Primeira coluna */}
       <Navbar />
-
       {/* Segunda coluna */}
-      <div className="flex items-center justify-center sm:w-4/5 w-full sm:p-12 bg-orange-50">
-        <div className="sm:grid grid-cols-2 gap-8 items-center h-screen">
+      <div className="flex items-center justify-center sm:w-4/5 w-full sm:p-12">
+        <div className="sm:grid grid-cols-2 gap-8 items-center min-h-screen">
           <div className="relative sm:h-4/5 h-3/5 overflow-hidden ">
             <Image src={Sobre} alt="Imagem" fill className="object-cover px-2 pt-2" />
           </div>
           <div className="bg-orange-50 px-2 pb-6">
-            <h2 className="sm:text-5xl text-4xl py-4">Nicole Valente</h2>
-            <p className="sm:text-lg text-gray-700  sm:leading-relaxed leading-normal">
+            <h2 className="sm:text-5xl text-3xl py-4">Nicole Valente</h2>
+            <p className="sm:text-lg text-gray-700 sm:leading-relaxed leading-normal">
               Olá, sou arquiteta e urbanista e estou há mais de 20 anos
               elaborando sonhos e projetando realidades nos segmentos de
               arquitetura e interiores de projetos institucionais, residenciais
