@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 
 const Contato = () => {
 
-  const Map = dynamic(() => import("../components/map"), { ssr: false });
+
 
   return (
     <main className="flex sm:flex-row flex-col  text-black min-h-screen">
@@ -13,7 +13,7 @@ const Contato = () => {
       {/* Segunda coluna */}
       <main className="sm:w-4/5 w-full sm:p-12 bg-orange-50 min-h-screen">
         <div className="bg-orange-100 flex sm:justify-end sm:pr-40 justify-center">
-          <div className="sm:bg-orange-200 bg-orange-50 p-8 space-y-8 w-full sm:w-auto font-light sm:font-normal">
+          <div className="sm:bg-orange-200/50 bg-orange-50 p-8 space-y-4 w-full sm:w-auto font-light sm:font-normal">
             <div className="flex space-x-4">
               <svg
                 viewBox="0 0 24 24"
@@ -66,7 +66,18 @@ const Contato = () => {
             </div>
           </div>
         </div>
-          <Map />
+        
+
+                    <div className="w-full h-72 sm:h-96 mt-4 overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.330567331528!2d-42.62815331370558!3d-19.52741657888513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa555935f284d4b%3A0xa3ee818ed19bb96!2sNV%20Arquitetura%20-%20Arquiteta%20Nicole%20Valente!5e0!3m2!1sen!2sbr!4v1764788257218!5m2!1sen!2sbr"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
       </main>
     </main>
   );
