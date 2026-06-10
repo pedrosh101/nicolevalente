@@ -17,7 +17,7 @@ const Projetos = () => {
       <Navbar />
 
       {/* Segunda coluna */}
-      <main className="sm:w-4/5 w-full sm:p-12 p-2 bg-orange-50">
+      <main className="sm:w-4/5 w-full sm:p-12 p-2 bg-[#F5F1EC]">
         <h1 className="pb-3 text-xl">Residências</h1>
         <div className="grid sm:grid-cols-4 gap-2 pb-8">
           {residenciaProjects.map((proj) => (

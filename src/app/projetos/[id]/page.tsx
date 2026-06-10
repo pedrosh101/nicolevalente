@@ -33,7 +33,7 @@ const ProjetoDetalhes = ({ params }: any) => {
     <>
       <main className="flex sm:flex-row flex-col text-black">
         <Navbar />
-        <div className="flex flex-col sm:w-4/5 w-full sm:p-12 p-2 bg-orange-50 min-h-screen">
+        <div className="flex flex-col sm:w-4/5 w-full sm:p-12 p-2 bg-[#F5F1EC] min-h-screen">
           <div className="flex flex-col md:min-h-screen items-center w-full">
             {/* primeiro elemento */}
             <div className="sm:h-4/6 h-96 w-full relative">

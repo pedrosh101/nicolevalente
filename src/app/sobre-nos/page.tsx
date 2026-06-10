@@ -4,7 +4,7 @@ import Sobre from "../../../public/img/Sobre.jpeg";
 
 const SobreNos = () => {
   return (
-    <main className="flex lg:flex-row flex-col bg-orange-50 text-black  font-public">
+    <main className="flex lg:flex-row flex-col bg-[#F5F1EC] text-black  font-public">
       {/* Primeira coluna */}
       <Navbar />
       {/* Segunda coluna */}

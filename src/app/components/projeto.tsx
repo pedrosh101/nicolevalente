@@ -46,7 +46,7 @@ const Projeto: React.FC<ProjetoProps> = ({ title, path, className}) => {
         }`}
       >
         <div
-          className="py-1 px-8 bg-orange-50 text-black text-md cursor-pointer"
+          className="py-1 px-8 bg-[#F5F1EC] text-black text-md cursor-pointer"
           onMouseEnter={() => setHoveringText(true)}
           onMouseLeave={() => setHoveringText(false)}
         >

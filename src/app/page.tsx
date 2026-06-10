@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <main className="flex sm:flex-row flex-col text-black font-public">
       <Navbar />
-      <main className="sm:w-4/5 w-full sm:p-12 p-2 bg-orange-50">
+      <main className="sm:w-4/5 w-full sm:p-12 p-2 bg-[#F5F1EC]">
         <div className="grid sm:grid-cols-3 gap-2">
           {novePrimeiros.map((proj) => (
             <Link

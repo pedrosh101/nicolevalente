@@ -11,9 +11,9 @@ const Contato = () => {
       <Navbar />
 
       {/* Segunda coluna */}
-      <main className="sm:w-4/5 w-full sm:p-12 bg-orange-50 min-h-screen">
-        <div className="bg-orange-100 flex sm:justify-end sm:pr-40 justify-center">
-          <div className="sm:bg-orange-200/50 bg-orange-50 p-8 space-y-4 w-full sm:w-auto font-light sm:font-normal">
+      <main className="sm:w-4/5 w-full sm:p-12 bg-[#F5F1EC] min-h-screen">
+        <div className="bg-[#D8C3B2] flex sm:justify-end sm:pr-40 justify-center">
+          <div className="sm:bg-[#F5F1EC] bg-[#F5F1EC] p-8 space-y-4 w-full sm:w-auto font-light sm:font-normal">
             <div className="flex space-x-4">
               <svg
                 viewBox="0 0 24 24"
