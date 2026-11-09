@@ -1,4 +1,4 @@
-export const projects = [
+const projetosBase = [
   {
     id: 100,
     title: "Residência E&E",
@@ -228,3 +228,23 @@ export const projects = [
     ],
   },
 ];
+
+// "Residência E&E" -> "residencia-ee"
+export const slugify = (texto: string) =>
+  texto
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // remove acentos
+    .toLowerCase()
+    .replace(/&/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+// adiciona o slug a cada projeto (títulos repetidos ganham -2, -3...)
+const usados: Record<string, number> = {};
+
+export const projects = projetosBase.map((proj) => {
+  const base = slugify(proj.title);
+  usados[base] = (usados[base] ?? 0) + 1;
+  const slug = usados[base] > 1 ? `${base}-${usados[base]}` : base;
+  return { ...proj, slug };
+});

@@ -2,31 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "PUBLIC";
-  src: url("../../public/fonts/PublicSans-VariableFont_wght.ttf");
-}
-
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --nude: #d8c3b2;
+  --offwhite: #f5f1ec;
+  --warm: #8a817c;
+  --graphite: #3a3a3a;
+  --bronze: #b08a6a;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--graphite);
+  background: var(--offwhite);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-weight: 400;
+}
+
+::selection {
+  background: var(--nude);
+  color: var(--graphite);
+}
+
+/* Swiper: setas e contador na cor da marca */
+.swiper-nv {
+  --swiper-navigation-color: #b08a6a; /* bronze */
+  --swiper-navigation-size: 32px;
+  --swiper-pagination-color: #f5f1ec;
+  color: #f5f1ec;
+}
+
+.swiper-nv .swiper-button-next,
+.swiper-nv .swiper-button-prev {
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.swiper-nv .swiper-button-next:hover,
+.swiper-nv .swiper-button-prev:hover {
+  --swiper-navigation-color: #d8c3b2; /* nude */
 }

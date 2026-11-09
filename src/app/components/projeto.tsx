@@ -1,56 +1,31 @@
-"use client";
-import React, { useState, MouseEvent } from "react";
+import React from "react";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
 type ProjetoProps = {
   title: string;
   path: string;
-  className:any;
+  className?: any;
 };
 
-const Projeto: React.FC<ProjetoProps> = ({ title, path, className}) => {
-  const [showText, setShowText] = useState(false);
-  const [hoveringText, setHoveringText] = useState(false);
-
-  const handleMouseEnter = (e: MouseEvent<HTMLDivElement>) => {
-    e.currentTarget.classList.add(
-      "filter",
-      "brightness-75",
-      "transition-all",
-      "duration-500"
-    );
-    setShowText(true);
-  };
-
-  const handleMouseLeave = (e: MouseEvent<HTMLDivElement>) => {
-    e.currentTarget.classList.remove("filter", "brightness-75");
-    if (!hoveringText) {
-      setShowText(false);
-    }
-  };
-
+const Projeto: React.FC<ProjetoProps> = ({ title, path, className }) => {
   return (
-    <div className={twMerge("relative overflow-hidden h-96", className)}>
+    <div
+      className={twMerge(
+        "group relative overflow-hidden h-96 bg-nude/40",
+        className
+      )}
+    >
       <Image
         src={path}
-        alt="Imagem"
+        alt={title}
         fill
-        onMouseEnter={(e) => handleMouseEnter(e)}
-        onMouseLeave={handleMouseLeave}
-        className="object-cover"
+        className="object-cover transition-all duration-500 group-hover:brightness-75"
       />
-      <div
-        className={`absolute bottom-0 right-0 w-full transition-transform duration-500 transform ${
-          showText || hoveringText ? "translate-y-0" : "translate-y-full"
-        }`}
-      >
-        <div
-          className="py-1 px-8 bg-[#F5F1EC] text-black text-md cursor-pointer"
-          onMouseEnter={() => setHoveringText(true)}
-          onMouseLeave={() => setHoveringText(false)}
-        >
-          <p className="font-public font-semibold text-sm">{title}</p>
+
+      <div className="absolute bottom-0 right-0 w-full translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+        <div className="py-2 px-6 bg-offwhite text-graphite">
+          <p className="font-sans font-medium text-sm">{title}</p>
         </div>
       </div>
     </div>

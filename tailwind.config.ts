@@ -9,10 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        clr1: '#6F6E6C'
+        nude: '#D8C3B2', // nude principal
+        offwhite: '#F5F1EC', // apoio
+        warm: '#8A817C', // cinza quente, estrutura
+        graphite: '#3A3A3A', // grafite, texto
+        bronze: '#B08A6A', // bronze, acento
       },
-      fontFamily:{
-        public: ["PUBLIC"]
+      fontFamily: {
+        display: ['var(--font-playfair)', 'Georgia', 'serif'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
